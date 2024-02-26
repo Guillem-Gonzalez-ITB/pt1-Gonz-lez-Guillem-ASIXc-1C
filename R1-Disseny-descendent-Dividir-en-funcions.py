@@ -13,26 +13,38 @@ import random
 # region definición de funciones ------------
 
 
+# todo definir la función que mezcla las letras de las palabras
 def mix_letters(word):
+    if is_number(word):
+        print(word, end="")
+        return
     # todo mezclar las letras de las palabras excepto la primera y la última
-    if len(word) > 2:
+    elif len(word) > 2:
         # todo devolver la frase con las palabras modificadas
         print(word[0] + "".join(random.sample(word[1:-1], len(word[1:-1]))) + word[-1], end="")
     else:
         print(word, end="")
 
 
-def run_words(palabras):
+def run_words(words):
     # todo crear un for para recorrer las palabras
     for i in range(len(words)):
         mix_letters(words[i])
         print(" ", end="")
         if i > 1 and i % 20 == 0:
             print("")
+
+
+# todo identificar si es numero o no
+def is_number(word):
+    try:
+        float(word)
+        return True
+    except ValueError:
+        return False
 # endregion
 
 
-# todo pedir una frase por teclado
 sentence = input("Introduce una frase: ")
 
 # todo dividir la frase en palabras
