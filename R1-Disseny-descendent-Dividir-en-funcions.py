@@ -1,5 +1,6 @@
 """
 Guillem González Rodríguez
+Adriana Sánchez Martín
 ASIXc 1C
 6/2/2024
 
@@ -22,7 +23,7 @@ def mix_letters(word):
     elif len(word) > 2:
         # todo devolver la frase con las palabras modificadas
         print(word[0] + "".join(random.sample(word[1:-1], len(word[1:-1]))) + word[-1], end="")
-    
+
     else:
         print(word, end="")
 
