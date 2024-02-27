@@ -26,8 +26,9 @@ def mix_letters(word):
         print(word, end="")
 
 
+# todo crear un for para recorrer las palabras
 def run_words(words):
-    # todo crear un for para recorrer las palabras
+
     for i in range(len(words)):
         mix_letters(words[i])
         print(" ", end="")
@@ -44,10 +45,10 @@ def is_number(word):
         return False
 # endregion
 
+# main
+
 
 sentence = input("Introduce una frase: ")
-
 # todo dividir la frase en palabras
 words = sentence.split(" ")
-
 run_words(words)
