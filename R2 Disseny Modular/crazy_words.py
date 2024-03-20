@@ -15,7 +15,6 @@ def get_string():
     data_source.get_data__from_keyboard()
 
 
-
 def split_words(sentence):
     global frase
     c = 0
