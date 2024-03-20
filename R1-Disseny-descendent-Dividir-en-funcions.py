@@ -59,7 +59,6 @@ def main():
     sentence = get_string()
     split_words(sentence)
     mix_letters(churro)
-
 # endregion
 
 # region main
