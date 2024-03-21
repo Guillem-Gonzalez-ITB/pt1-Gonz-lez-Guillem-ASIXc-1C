@@ -49,7 +49,6 @@ def get_data_from_chatgpt():
     response = requests.post(api_url, headers=headers, params=data)
 
     if response.status_code == 200:
-        # Parse and print the completion
         sentence = response.json()
         print("Completion:", sentence['choices'][0]['text'])
     else:

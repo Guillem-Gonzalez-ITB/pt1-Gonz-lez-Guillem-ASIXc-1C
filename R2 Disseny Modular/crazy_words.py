@@ -30,7 +30,6 @@ def get_string():
         get_string()
 
 
-
 def split_words(sentence):
     global frase
     c = 0
