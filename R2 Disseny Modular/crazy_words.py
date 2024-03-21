@@ -12,7 +12,23 @@ frase = []
 
 
 def get_string():
-    data_source.get_data__from_keyboard()
+    inputtype = input("Introduce el tipo de entrada (teclado, servidor, archivo o chatGPT): ")
+    if inputtype.lower() == "teclado":
+        sentence = data_source.get_data__from_keyboard()
+        return sentence
+    elif inputtype.lower() == "servidor":
+        sentence = data_source.get_data_from_server()
+        return sentence
+    elif inputtype.lower() == "chatgpt":
+        sentence = data_source.get_data_from_chatgpt()
+        return sentence
+    elif inputtype.lower() == "archivo":
+        sentence = data_source.get_data_from_file()
+        return sentence
+    else:
+        print("Tipo de entrada no válido.")
+        get_string()
+
 
 
 def split_words(sentence):
