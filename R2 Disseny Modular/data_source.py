@@ -9,7 +9,7 @@ def get_data__from_keyboard():
 def get_data_from_server():
     response = requests.models.Response()
     while response.status_code != requests.codes.ok:
-        your_api_key = "njbQVf5jeTAp1vHFO3z73g==favkOjbE3rJLLiwj"
+        your_api_key = ""
         api_url = 'https://api.api-ninjas.com/v1/chucknorris'
         response = requests.get(api_url, "joke", headers={'X-Api-Key': your_api_key})
 
@@ -27,7 +27,7 @@ def get_data_from_file():
 
 
 def get_data_from_chatgpt():
-    your_api_key = "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"
+    your_api_key = ""
     prompt_text = input("Introduce un texto: ")
     api_url = "https://api.openai.com/v1/chat/completions"
 
